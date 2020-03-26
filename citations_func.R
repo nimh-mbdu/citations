@@ -25,6 +25,13 @@ statistics <- c(Mean = mean(cite_df$projected_citations), Median = median(cite_d
               "Std Dv" = sd(cite_df$projected_citations), "Minimum" = min(cite_df$projected_citations),
               Maximum = max(cite_df$projected_citations))
 print (statistics)
+
+if (mean(cite_df$projected_citations)>1500) {
+  print("Better than last year")
+} else if (statistics$Mean<1500){
+  print("Oops, there is a dip")
+}
+
 #print(mean(cite_df$projected_citations))
 #print(median(cite_df$projected_citations))
 #print(range(cite_df$projected_citations))
